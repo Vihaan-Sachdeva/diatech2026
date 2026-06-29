@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DirhamWise · Level Up Your Money 🔥</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="../index.html" class="logo">
+          <div class="logo-icon">د</div>
+          <div class="logo-text">dirham<span>wise</span></div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="../index.html">🏠 Hub</a></li>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#budget-tool">💰 Budget</a></li>
+          <li><a href="#goals-section">🎯 Goals</a></li>
+          <li><a href="#uae-section">📚 Learn</a></li>
+          <li><a href="#leaderboard-section">🏆 Leaderboard</a></li>
+          <li><a href="#profile-section">👤 Profile</a></li>
+        </ul>
+        <div class="profile-badge">
+          <div class="avatar">SK</div>
+          <div class="xp-counter">
+            Level <span id="xpLevel">4</span> ·
+            <small><span id="xpTotal">2450</span> XP</small>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container" id="top">
+      <section class="hero">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>🔥 NEW</span> · Eidiya Savings Challenge Live!
+          </div>
+          <h1>
+            Level Up Your<br>
+            <span>Money Game</span>
+          </h1>
+          <p>Learn to save, spend smart, and earn XP — all in dirhams. Just wins.</p>
+
+          <div class="cta-group">
+            <button class="btn-primary" id="startPlayingBtn">
+              🎮 Start Playing · Free
+            </button>
+            <button class="btn-secondary" id="leaderboardBtn">
+              🏆 See Leaderboard
+            </button>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-pill">
+              <span class="emoji">🪙</span>
+              <span class="number">1,200+</span> teens
+            </div>
+            <div class="stat-pill">
+              <span class="emoji">🏆</span>
+              <span class="number">45K</span> XP earned
+            </div>
+            <div class="stat-pill">
+              <span class="emoji">🇦🇪</span>
+              UAE made
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="card-header">
+            <h3>Quick Budget</h3>
+            <span class="chip">LIVE</span>
+          </div>
+
+          <div class="budget-item">
+            <div class="budget-label">
+              <span>🛍️ Spending</span>
+              <span id="spendingAmount">AED 245</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill spending" id="spendingFill" style="width: 65%"></div>
+            </div>
+          </div>
+
+          <div class="budget-item">
+            <div class="budget-label">
+              <span>💰 Savings</span>
+              <span id="savingsAmount">AED 120</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill savings" id="savingsFill" style="width: 40%"></div>
+            </div>
+          </div>
+
+          <div class="budget-item">
+            <div class="budget-label">
+              <span>🎮 Entertainment</span>
+              <span id="entertainmentAmount">AED 180</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill entertainment" id="entertainmentFill" style="width: 80%"></div>
+            </div>
+          </div>
+
+          <div class="budget-total">
+            <span>Total</span>
+            <span id="budgetTotal">AED 545</span>
+          </div>
+
+          <div style="margin-top: 2rem; text-align: center;">
+            <span class="xp-reward" id="xpMessage">+50 XP if you beat your budget!</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-header">
+        <h2>Play · Save · <span>Win</span></h2>
+        <p>Turn financial literacy into your new favorite game</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-emoji">💰</div>
+          <h3>Budget Battles</h3>
+          <p>Compete against yourself to spend smarter. Beat your personal best and earn big XP.</p>
+          <div class="xp-reward">+200 XP per win</div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-emoji">🎯</div>
+          <h3>Savings Streaks</h3>
+          <p>Save every day and build streaks. Longer streak = bigger bonuses!</p>
+          <div class="xp-reward">🔥 7 day streak</div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-emoji">🏆</div>
+          <h3>Weekly Quests</h3>
+          <p>New challenges every week. Complete them all for exclusive badges.</p>
+          <div class="xp-reward">3/5 completed</div>
+        </div>
+      </div>
+
+      <section class="uae-section" id="uae-section">
+        <h2>🇦🇪 Real UAE Challenges</h2>
+        <div class="scenarios-grid">
+          <div id="challenge-dubai-mall" class="scenario-item" data-challenge="dubai-mall" data-xp="150">
+            <div class="scenario-emoji">🛍️</div>
+            <h4>Dubai Mall Trip</h4>
+            <p>Budget AED 300 for food, games, and shopping</p>
+            <div class="scenario-xp">+150 XP</div>
+          </div>
+          <div id="challenge-eidiya" class="scenario-item" data-challenge="eidiya" data-xp="200">
+            <div class="scenario-emoji">🎁</div>
+            <h4>Eidiya Saver</h4>
+            <p>Save 50% of your Eidiya for something big</p>
+            <div class="scenario-xp">+200 XP</div>
+          </div>
+          <div id="challenge-friends-dinner" class="scenario-item" data-challenge="friends-dinner" data-xp="100">
+            <div class="scenario-emoji">🍔</div>
+            <h4>Friends Dinner</h4>
+            <p>Split the bill without going over budget</p>
+            <div class="scenario-xp">+100 XP</div>
+          </div>
+          <div id="challenge-game-release" class="scenario-item" data-challenge="game-release" data-xp="175">
+            <div class="scenario-emoji">🎮</div>
+            <h4>Game Release</h4>
+            <p>Save for that new game dropping next month</p>
+            <div class="scenario-xp">+175 XP</div>
+          </div>
+          <div id="challenge-abu-dhabi" class="scenario-item" data-challenge="abu-dhabi" data-xp="225">
+            <div class="scenario-emoji">🏖️</div>
+            <h4>Abu Dhabi Weekend</h4>
+            <p>Plan a trip with friends on a budget</p>
+            <div class="scenario-xp">+225 XP</div>
+          </div>
+          <div id="challenge-phone-upgrade" class="scenario-item" data-challenge="phone-upgrade" data-xp="500">
+            <div class="scenario-emoji">📱</div>
+            <h4>Phone Upgrade</h4>
+            <p>Save AED 200/month for 6 months</p>
+            <div class="scenario-xp">🔥 500 XP</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tool-section" id="budget-tool">
+        <div class="tool-header">
+          <h2>💰 Budget Simulator</h2>
+          <span class="live-badge">⚡ LIVE · Drag to adjust</span>
+        </div>
+
+        <div class="tool-grid">
+          <div class="tool-card">
+            <h4>Spending Money <span>🛍️</span></h4>
+            <div class="amount-big" id="simSpendingAmount">AED 200 <small>/ week</small></div>
+            <input type="range" class="slider" id="spendingSlider" min="0" max="500" value="200">
+          </div>
+
+          <div class="tool-card">
+            <h4>Savings <span>💰</span></h4>
+            <div class="amount-big" id="simSavingsAmount">AED 150 <small>/ week</small></div>
+            <input type="range" class="slider" id="savingsSlider" min="0" max="500" value="150">
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+          <div class="xp-reward" id="budgetScoreMsg" style="font-size: 1.3rem; padding: 1rem 3rem;">
+            ⚡ Your budget score: 85/100 · +50 XP if you lock in for a week
+          </div>
+        </div>
+      </section>
+
+      <section class="streak-section">
+        <div class="streak-left">
+          <h3>🔥 Savings Streak</h3>
+          <div class="streak-number" id="streakDays">7 days</div>
+          <div class="streak-days" id="streakDaysContainer">
+            <span class="day active">M</span>
+            <span class="day active">T</span>
+            <span class="day active">W</span>
+            <span class="day active">T</span>
+            <span class="day active">F</span>
+            <span class="day active">S</span>
+            <span class="day active">S</span>
+          </div>
+        </div>
+        <div class="streak-right">
+          <div class="streak-prize">🎁</div>
+          <div class="streak-prize" style="font-size: 1.5rem;" id="streakRewardMsg">7 day reward ready!</div>
+          <button class="claim-btn" id="claimStreakBtn">Claim +500 XP</button>
+        </div>
+      </section>
+
+      <div class="goals-preview" id="goals-section">
+        <div class="goals-header">
+          <h2>🎯 Your Goals</h2>
+          <button class="add-goal" id="createGoalBtn">+ Create New Goal</button>
+        </div>
+
+        <div class="goal-controls">
+          <select id="goalSelect">
+            <option value="iphone">New iPhone</option>
+            <option value="mall">Dubai Mall</option>
+            <option value="game">New Game</option>
+          </select>
+          <input type="number" id="goalAddAmount" placeholder="Add AED" min="1">
+          <button class="mission-btn" id="goalAddBtn">Add to Savings</button>
+        </div>
+
+        <div class="goals-grid" id="goalsGrid">
+          <div class="goal-card" data-goal="iphone">
+            <div class="goal-icon">📱</div>
+            <h4>New iPhone</h4>
+            <div class="goal-target">AED 3,500</div>
+            <div class="goal-progress">
+              <div class="progress-stats">
+                <span id="iphoneSaved">AED 1,200 saved</span>
+                <span id="iphonePercent">34%</span>
+              </div>
+              <div class="goal-bar">
+                <div class="goal-fill" id="iphoneFill" style="width: 34%"></div>
+              </div>
+            </div>
+            <div class="goal-badge" id="iphoneBadge">+50 XP this week</div>
+          </div>
+
+          <div class="goal-card" data-goal="mall">
+            <div class="goal-icon">🛍️</div>
+            <h4>Dubai Mall</h4>
+            <div class="goal-target">AED 500</div>
+            <div class="goal-progress">
+              <div class="progress-stats">
+                <span id="mallSaved">AED 400 saved</span>
+                <span id="mallPercent">80%</span>
+              </div>
+              <div class="goal-bar">
+                <div class="goal-fill" id="mallFill" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="goal-badge" id="mallBadge">🔥 Almost there!</div>
+          </div>
+
+          <div class="goal-card" data-goal="game">
+            <div class="goal-icon">🎮</div>
+            <h4>New Game</h4>
+            <div class="goal-target">AED 250</div>
+            <div class="goal-progress">
+              <div class="progress-stats">
+                <span id="gameSaved">AED 150 saved</span>
+                <span id="gamePercent">60%</span>
+              </div>
+              <div class="goal-bar">
+                <div class="goal-fill" id="gameFill" style="width: 60%"></div>
+              </div>
+            </div>
+            <div class="goal-badge" id="gameBadge">+25 XP tomorrow</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="leaderboard-preview" id="leaderboard-section">
+        <div class="leaderboard-header">
+          <h3>🏆 This Week's Champions</h3>
+          <span class="xp-reward">Ends in 3 days</span>
+        </div>
+
+        <div class="rank-list">
+          <div class="rank-item">
+            <div class="rank-number gold">1</div>
+            <div class="rank-avatar">MA</div>
+            <div class="rank-info">
+              <div class="rank-name">Mohammed A.</div>
+              <div class="rank-score">3,450 XP this week</div>
+            </div>
+            <div class="rank-badge">🔥 On fire!</div>
+          </div>
+          <div class="rank-item">
+            <div class="rank-number">2</div>
+            <div class="rank-avatar">SF</div>
+            <div class="rank-info">
+              <div class="rank-name">Sarah F.</div>
+              <div class="rank-score">3,120 XP this week</div>
+            </div>
+            <div class="rank-badge">⭐ Rising star</div>
+          </div>
+          <div class="rank-item">
+            <div class="rank-number">3</div>
+            <div class="rank-avatar">AK</div>
+            <div class="rank-info">
+              <div class="rank-name">Ahmed K.</div>
+              <div class="rank-score">2,890 XP this week</div>
+            </div>
+            <div class="rank-badge">💪 7 day streak</div>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+          <button class="btn-secondary" id="fullLeaderboardBtn" style="padding: 0.8rem 3rem;">See Full Leaderboard →</button>
+        </div>
+      </div>
+
+      <section class="profile-section" id="profile-section">
+        <div class="profile-card">
+          <div class="profile-left">
+            <div class="profile-avatar-large" id="profileAvatarLarge">SK</div>
+            <div class="profile-level">
+              Level <span id="profileLevel">4</span>
+            </div>
+            <div class="profile-xp">
+              <span id="profileXp">2450</span> XP total
+            </div>
+          </div>
+          <div class="profile-right">
+            <h2>Your Profile</h2>
+            <div class="profile-row">
+              <label for="profileName">Name</label>
+              <input type="text" id="profileName" placeholder="Your name">
+            </div>
+            <div class="profile-row">
+              <label for="profileInitials">Initials (for avatar)</label>
+              <input type="text" id="profileInitials" placeholder="e.g., KV" maxlength="3">
+            </div>
+            <div class="profile-row">
+              <label for="profileBio">Bio</label>
+              <textarea id="profileBio" rows="3" placeholder="Tell us about your money goals..."></textarea>
+            </div>
+            <div class="profile-actions">
+              <button class="btn-primary small" id="saveProfileBtn">Save Profile</button>
+              <button class="btn-secondary small" id="resetProfileBtn">Reset</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Goal creation overlay -->
+      <div class="modal-backdrop" id="goalModalBackdrop">
+        <div class="modal" id="goalModal">
+          <h3>Create New Goal</h3>
+          <div class="profile-row">
+            <label for="modalGoalName">Goal name</label>
+            <input type="text" id="modalGoalName" placeholder="e.g., New Laptop">
+          </div>
+          <div class="profile-row">
+            <label for="modalGoalTarget">Target amount (AED)</label>
+            <input type="number" id="modalGoalTarget" placeholder="1500" min="1">
+          </div>
+          <div class="profile-row">
+            <label for="modalGoalIcon">Emoji (optional)</label>
+            <input type="text" id="modalGoalIcon" placeholder="🎧" maxlength="2">
+          </div>
+          <div class="modal-actions">
+            <button class="btn-secondary small" id="cancelGoalBtn">Cancel</button>
+            <button class="btn-primary small" id="saveGoalBtn">Save Goal</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <a href="../index.html" style="display:flex;align-items:center;gap:0.8rem;text-decoration:none;color:white;">
+              <div class="logo-icon">د</div>
+              <div style="font-size:2rem;font-weight:700;">dirhamwise</div>
+            </a>
+          </div>
+          <p>Level up your financial future. Built for UAE teens, by UAE teens.</p>
+          <div class="social-links">
+            <span class="social-link">📱</span>
+            <span class="social-link">📸</span>
+            <span class="social-link">🎵</span>
+            <span class="social-link">💬</span>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Play</h4>
+          <ul>
+            <li><a href="#budget-tool">Budget Games</a></li>
+            <li><a href="#goals-section">Savings Quests</a></li>
+            <li><a href="#uae-section">Weekly Challenges</a></li>
+            <li><a href="#leaderboard-section">Leaderboard</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Learn</h4>
+          <ul>
+            <li><a href="#">Budgeting Basics</a></li>
+            <li><a href="#">Saving Tips</a></li>
+            <li><a href="#">UAE Money Guide</a></li>
+            <li><a href="#">Eidiya Calculator</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Trust</h4>
+          <ul>
+            <li><a href="#">Privacy First</a></li>
+            <li><a href="#">No Data Collection</a></li>
+            <li><a href="#">100% Free</a></li>
+            <li><a href="#">Made in UAE</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 DirhamWise · Financial confidence for UAE teens</p>
+        <span class="privacy-badge">🔒 Your data stays on your device · No sign-up needed</span>
+      </div>
+    </footer>
+  </body>
+</html>
